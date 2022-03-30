@@ -3,7 +3,6 @@ const router = express.Router();
 const fs = require("fs");
 const orders = require("../data/orders.json");
 const menu = require("../data/menu.json");
-const { table } = require("console");
 
 router.get("/", (req, res) => {
   res.status(200).json(orders);
