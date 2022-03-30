@@ -1,0 +1,21 @@
+GET http://localhost:3000/plates HTTP/1.1
+content-type: application/json
+
+POST http://localhost:3000/create HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Pizza 2",
+    "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature, traditionally in a wood-fired oven. The name is usually localized into other languages as 'pizza' (pronounced [paˈziːta]), but the word 'pizza' is also used as a formal name for the dish in Italy, the United States, India, the Philippines, and in other countries.",
+    "price": "10.00",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pizza_tradicional_de_Mar%C3%ADa.JPG/800px-Pizza_tradicional_de_Mar%C3%ADa.JPG"
+}
+
+PUT http://localhost:3000/plates/6 HTTP/1.1
+
+{
+    "name": "Cesar Salad"
+}
+
+DELETE http://localhost:3000/remove/2 HTTP/1.1
+content-type: application/json

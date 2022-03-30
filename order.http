@@ -1,0 +1,13 @@
+GET http://localhost:3000/orders HTTP/1.1
+content-type: application/json
+
+POST http://localhost:3000/orders/create HTTP/1.1
+content-type: application/json
+
+{
+    "table": "1",
+    "orders": ["1", "5", "3"]
+}
+
+GET http://localhost:3000/orders/bill/1 HTTP/1.1
+content-type: application/json
