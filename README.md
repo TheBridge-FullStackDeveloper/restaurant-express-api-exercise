@@ -1,6 +1,7 @@
 # Restaurant express exercise
 
-![img](https://media4.giphy.com/media/TGcD6N8uzJ9FXuDV3a/giphy.gif?cid=ecf05e4737gwuigksqiwmenv8gpwgm4nozuc5cy2bi0uqhux&rid=giphy.gif&ct=g)
+![image](https://user-images.githubusercontent.com/33903092/160862160-f1300ebf-e1cd-467f-a64b-1c3f17e7c2e5.png)
+
 
 El jefe de un local os ha pedido de crear un servidor para gestionar los platos y las comandas de su restaurante.
 
@@ -12,7 +13,13 @@ First run:
 npm i
 ```
 
-## Goals ✅
+run server:
+
+```sh
+npm run dev
+```
+
+## Goals ✅
 
 1. Inside the `routes/plates.js` you'll need to create a CRUD to manage the plates in the menu.
 
@@ -78,7 +85,7 @@ POST http://localhost:3000/orders/create
 }
 ```
 
-Bonus 🎁
+## Bonus 🎁
 
 Inside `/routes/orders.js` create a route to GET the table's bill
 
