@@ -5,10 +5,13 @@ module.exports = router
 const menu = require('../data/menu.json')
 const { writeFile } = require('fs')
 
+//GET
 router.get('/', (req, res) => {
     res.status(200).json(menu)
 });
 
+
+//POST
 router.post('/', (req, res) => {
     const pastaPomodoro = {
         "name": "Pasta al Pomodoro",
@@ -33,6 +36,8 @@ router.post('/', (req, res) => {
     });
 });
 
+
+//PUT
 router.put('/6', (req, res) => {
 
     
@@ -49,6 +54,8 @@ router.put('/6', (req, res) => {
     });
 });
 
+
+//DELETE
 router.delete('/:id', (req, res) => {
     const id = req.params.id;
     const newMenu = menu.filter(plate => plate.id !== id)

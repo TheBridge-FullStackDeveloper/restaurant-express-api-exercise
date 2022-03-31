@@ -8,7 +8,7 @@ const ordersRoute = require('./routes/orders');
 app.use(express.json());
 
 app.use('/plates', plateRoute)
-app.use('/order', ordersRoute)
+app.use('/orders', ordersRoute)
 
 
 app.listen(PORT, () => {
