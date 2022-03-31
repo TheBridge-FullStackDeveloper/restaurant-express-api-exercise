@@ -11,23 +11,43 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     const pastaPomodoro = {
-       "name": "Pasta al Pomodoro",
-       "description": "Tipical italian pasta",
-       "price": "10.99",
-       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
-   }
-
-   const newMenu = [...menu, pastaPomodoro]
-   
-   writeFile('./data/menu.json', JSON.stringify(newMenu), (error, info) => {
-        if (error) {
-        console.error(error)
-    } else {
-
+        "name": "Pasta al Pomodoro",
+        "description": "Tipical italian pasta",
+        "price": "10.99",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
     }
-})
+
+    const newMenu = [...menu, pastaPomodoro]
+
+    writeFile('./data/menu.json',
+    JSON.stringify(newMenu), (error, info) => {
+        if (error) {
+            console.error(error)
+        } else {
+            console.log(info)
+        }
+    })
     res.json({
         message: "Plate Created",
         data: newMenu
     })
 })
+
+
+router.put('/6', (req, res) => {
+
+    
+    const newMenu = menu.map(plate => {
+        if (plate.name === 'Salad') return {...plate, name: "Cesar Salad"}
+        return plate
+    })
+
+    writeFile('./data/menu.json', JSON.stringify(newMenu), () => {
+        res.json({
+            message: "Plate Updated",
+            data: newMenu
+        })
+    })
+})
+
+console.log(menu[5].name)
