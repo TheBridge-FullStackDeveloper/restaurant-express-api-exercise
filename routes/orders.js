@@ -12,10 +12,7 @@ router.get('/', (req, res) => {
 
 //POST
 router.post('/create', (req, res) => {
-    const newOrder = {
-        "table": "1",
-        "orders": ["1", "5", "3"]
-    }
+    const newOrder = req.body
     const updatedOrders = [...orders, newOrder]
     writeFile('./data/orders.json', JSON.stringify(updatedOrders), () => {
         res.json({
@@ -24,3 +21,7 @@ router.post('/create', (req, res) => {
         });
     });
 });
+
+router.get('/bill/:table', (req, res) => {
+    const table = req.params.table
+})
