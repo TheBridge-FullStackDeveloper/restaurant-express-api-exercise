@@ -4,6 +4,8 @@ const router = express.Router();
 module.exports = router;
 
 const orders = require('../data/orders.json');
+const menu = require('../data/menu.json');
+const { nextTick } = require("process");
 
 //GET
 router.get('/', (req, res) => {
@@ -22,6 +24,18 @@ router.post('/create', (req, res) => {
     });
 });
 
+//GET BILL
 router.get('/bill/:table', (req, res) => {
-    const table = req.params.table
-})
+    const [ {orders: currOrder} ] = orders.filter(bill => Number(bill.table) === Number(req.params.table))
+
+    const name = currOrder.map(currPlateId => menu.filter(plate => plate.id === currPlateId)).map(plate => plate[0].name)
+    const price = currOrder.map(currPlateId => menu.filter(plate => plate.id === currPlateId)).map(plate => plate[0].price)
+    
+    const bill = []
+
+    for (let i = 0; i < name.length; i++) {
+        bill.push(`${name[i]}: ${price[i]}`)
+    };
+    res.json([...bill, `total: ${price.reduce((e,a) => e+a)}`])
+});
+
