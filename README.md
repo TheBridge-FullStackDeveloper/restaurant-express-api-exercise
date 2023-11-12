@@ -1,19 +1,14 @@
-# Restaurant express exercise
+Ejercicio de servidor express para restaurante
+El gerente de un restaurante os ha pedido crear un servidor para gestionar los platos y las órdenes de su restaurante.
 
-![image](https://user-images.githubusercontent.com/33903092/160862160-f1300ebf-e1cd-467f-a64b-1c3f17e7c2e5.png)
-
-
-El jefe de un local os ha pedido de crear un servidor para gestionar los platos y las comandas de su restaurante.
-
-## Install project dependencies
-
-First run:
+Instalar dependencias del proyecto
+Primero ejecuta:
 
 ```sh
 npm i
 ```
 
-run server:
+Ejecutar servidor:
 
 ```sh
 npm run dev
@@ -21,17 +16,16 @@ npm run dev
 
 ## Goals ✅
 
-1. Inside the `routes/plates.js` you'll need to create a CRUD to manage the plates in the menu.
+1. Dentro de routes/plates.js necesitarás crear un CRUD para gestionar los platos en el menú.
+⚠️ En app.js falta algo para que las rutas funcionen correctamente.
 
-⚠️ In `app.js` something is missing for let the routes works correctly.
-
-- First route should be a GET to retrieve all the plates from `./data/menu.json`
+La primera ruta debería ser un GET para recuperar todos los platos de `./data/menu.json`
 
 ```
 GET http://localhost:3000/plates
 ```
 
-- Second route should be a POST to insert a plate in `./data/menu.json` and retrieve a JSON like this `{ message: "Plate Created", data: HERE SHOULD GO THE DATA SAVED }`
+La segunda ruta debería ser un POST para insertar un plato en ./data/menu.json y devolver un JSON como este { message: "Plate Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
 POST http://localhost:3000/plates
@@ -46,7 +40,7 @@ POST http://localhost:3000/plates
 }
 ```
 
-- Third route should be a PUT to change a property of a plate and retrieve a JSON like this `{ message: "Plate Updated", data: HERE SHOULD GO THE DATA SAVED }`
+La tercera ruta debería ser un PUT para cambiar una propiedad de un plato y devolver un JSON como este { message: "Plate Updated", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
 PUT http://localhost:3000/plates/6 HTTP/1.1
@@ -58,21 +52,20 @@ PUT http://localhost:3000/plates/6 HTTP/1.1
 }
 ```
 
-- Fourth Route should be a DELETE to remove a plate from the menu and retrieve a JSON like this `{ message: "Plate Removed", data: HERE SHOULD GO THE DATA SAVED }`
+La cuarta ruta debería ser un DELETE para eliminar un plato del menú y devolver un JSON como este { message: "Plate Removed", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
 DELETE http://localhost:3000/plates/2
 ```
 
-2. Inside the `routes/orders.js` you'll need to create a CR to manage the orders.
-
-- First route should be a GET to retrieve all the orders from `./data/orders.json`
+Dentro de `routes/orders.js` necesitarás crear un CR para gestionar las órdenes.
+La primera ruta debería ser un GET para recuperar todas las órdenes de `./data/orders.json`
 
 ```
 GET http://localhost:3000/orders
 ```
 
-- Second route should be a POST to insert a order in `./data/menu.json` and retrieve a JSON like this `{ message: "Order Created", data: HERE SHOULD GO THE DATA SAVED }`
+La segunda ruta debería ser un POST para insertar una orden en ./data/menu.json y devolver un JSON como este { message: "Order Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
 POST http://localhost:3000/orders/create
@@ -85,15 +78,14 @@ POST http://localhost:3000/orders/create
 }
 ```
 
-## Bonus 🎁
-
-Inside `/routes/orders.js` create a route to GET the table's bill
+Bonus 🎁
+Dentro de `/routes/orders.js` crea una ruta para obtener la cuenta de la mesa
 
 ```
 GET http://localhost:3000/orders/bill/1
 ```
 
-Example Output:
+Ejemplo de salida:
 ```
 Pizza 10 
 Cake 15 
