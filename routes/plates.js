@@ -13,8 +13,12 @@ router.get("/", (req, res) => {
 
 //La segunda ruta debería ser un POST para insertar un plato en ./data/menu.json y devolver un JSON como este { message: "Plate Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 router.post("/", (req, res) => {
-  let data = JSON.stringify(req.body);
-  fs.writeFile("./data/test.json", `{"message": "Plate Created", "data": ${data} }`, (err) => {
+  const completeData = {
+    message: "Plate Created",
+    data: req.body,
+  };
+  const newPlatesObj = [...plates, completeData];
+  fs.writeFile("./data/test.json", JSON.stringify(newPlatesObj), (err) => {
     if (err) throw err;
     console.log("Data written to file");
     res.send("Data written to file");
