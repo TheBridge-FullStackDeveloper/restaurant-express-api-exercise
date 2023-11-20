@@ -1,23 +1,23 @@
 const express = require("express");
 const router = express.Router();
 const plates = require("../data/menu.json");
-const fs = require("fs"); // Import the fs module
+const fs = require("fs"); // Import the fs module, it is already installed in Node
 
 //./data/menu.json looks for the file in the data directory within the current directory.
 //../data/menu.json looks for the file in the data directory within the parent directory.
 
 //La primera ruta debería ser un GET para recuperar todos los platos de ./data/menu.json
-router.get("/plates", (req, res) => {
+router.get("/", (req, res) => {
   res.send(plates);
 });
 
 //La segunda ruta debería ser un POST para insertar un plato en ./data/menu.json y devolver un JSON como este { message: "Plate Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
-router.post("/plates", (req, res) => {
-  const newFoodObj = [...plates, req.body];
-
-  fs.writeFile("./data/menu.json", JSON.stringify(newFoodObj), (err) => {
+router.post("/", (req, res) => {
+  let data = JSON.stringify(req.body);
+  fs.writeFile("./data/test.json", `{"message": "Plate Created", "data": ${data} }`, (err) => {
     if (err) throw err;
-    res.send({ message: "Plate Removed", data: req.body });
+    console.log("Data written to file");
+    res.send("Data written to file");
   });
 });
 
