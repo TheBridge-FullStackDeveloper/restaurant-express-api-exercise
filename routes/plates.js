@@ -26,6 +26,11 @@ router.post("/", (req, res) => {
 });
 
 //La tercera ruta debería ser un PUT para cambiar una propiedad de un plato y devolver un JSON como este { message: "Plate Updated", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
+router.put("/:id", (req, res) => {
+  console.log(req.params.id);
+  console.log(plates);
+  res.send(plates);
+});
 
 //La cuarta ruta debería ser un DELETE para eliminar un plato del menú y devolver un JSON como este { message: "Plate Removed", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
