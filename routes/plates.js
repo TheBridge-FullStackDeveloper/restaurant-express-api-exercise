@@ -13,15 +13,15 @@ router.get("/", (req, res) => {
 
 //La segunda ruta debería ser un POST para insertar un plato en ./data/menu.json y devolver un JSON como este { message: "Plate Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 router.post("/", (req, res) => {
-  const completeData = {
+  const createdData = {
     message: "Plate Created",
     data: req.body,
   };
-  const newPlatesObj = [...plates, completeData];
+  const newPlatesObj = [...plates, req.body];
   fs.writeFile("./data/menu.json", JSON.stringify(newPlatesObj), (err) => {
     if (err) throw err;
     console.log("Data written to file");
-    res.json(newPlatesObj);
+    res.json(createdData);
   });
 });
 
@@ -29,19 +29,19 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
   console.log(req.params.id); //6 (o el número que ponga al final del path)
-  const platesUpdated = plates.map((foodItem) => {
+  const updatedData = { message: "Plate Updated", data: req.body };
+  console.log(updatedData); //{ message: 'Plate Updated', data: { name: 'Cesar Salad' } }
+  const updatedFood = plates.map((foodItem) => {
     if (foodItem.id === req.params.id) {
-      foodItem.name = "Cesar salad"
+      foodItem.name = 'Cesar salad'
     }
     return foodItem;
   })
-  console.log(platesUpdated); //El nombre está cambiado ya en consola, pero no en nuestra carpeta data
-  fs.writeFile("./data/menu.json", JSON.stringify(platesUpdated), (err) => {
+  fs.writeFile("./data/menu.json", JSON.stringify(updatedFood), (err) => {
     if (err) throw err;
     console.log("Data written to file");
-    res.json(platesUpdated);
+    res.json(updatedData);
   });
-  res.send("OK");
 });
 
 //La cuarta ruta debería ser un DELETE para eliminar un plato del menú y devolver un JSON como este { message: "Plate Removed", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }

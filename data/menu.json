@@ -42,21 +42,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Salad_with_tomatoes_and_mozzarella.jpg/220px-Salad_with_tomatoes_and_mozzarella.jpg"
   },
   {
-    "message": "Plate Created",
-    "data": {
-      "name": "Pasta al Pomodoro",
-      "description": "Tipical italian pasta",
-      "price": "10.99",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
-    }
-  },
-  {
-    "message": "Plate Created",
-    "data": {
-      "name": "Pasta al Pomodoro",
-      "description": "Tipical italian pasta",
-      "price": "10.99",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
-    }
+    "name": "Pasta al Pomodoro",
+    "description": "Tipical italian pasta",
+    "price": "10.99",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
   }
 ]
