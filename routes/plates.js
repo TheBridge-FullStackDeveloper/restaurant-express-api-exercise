@@ -46,8 +46,10 @@ router.put("/:id", (req, res) => {
 
 //La cuarta ruta debería ser un DELETE para eliminar un plato del menú y devolver un JSON como este { message: "Plate Removed", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 router.delete("/:id", (req, res) => {
-  const deletedData = { message: "Plate Removed"}
-  const deletedFood = plates.filter((foodItem) => foodItem.id !== req.params.id);
+  const deletedData = { message: "Plate Removed" };
+  const deletedFood = plates.filter(
+    (foodItem) => foodItem.id !== req.params.id
+  );
   console.log(deletedData);
   console.log(deletedFood);
   fs.writeFile("./data/menu.json", JSON.stringify(deletedFood), (err) => {
