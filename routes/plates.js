@@ -33,10 +33,10 @@ router.put("/:id", (req, res) => {
   console.log(updatedData); //{ message: 'Plate Updated', data: { name: 'Cesar Salad' } }
   const updatedFood = plates.map((foodItem) => {
     if (foodItem.id === req.params.id) {
-      foodItem.name = 'Cesar salad'
+      foodItem.name = req.body.name;
     }
     return foodItem;
-  })
+  });
   fs.writeFile("./data/menu.json", JSON.stringify(updatedFood), (err) => {
     if (err) throw err;
     console.log("Data written to file");
