@@ -35,11 +35,11 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  const newMenu = menu.filter(el => el.id !== req.params.id);
+  const newMenu = menu.filter((el) => el.id !== req.params.id);
 
   fs.writeFile("./data/menu.json", JSON.stringify(newMenu), (err, data) => {
     if (err) throw err;
-    res.send('Plate removed');
+    res.send("Plate removed");
   });
 });
 module.exports = router;
