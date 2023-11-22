@@ -24,25 +24,27 @@ router.post("/create", (req, res) => {
 
 //Bonus 🎁 Dentro de /routes/orders.js crea una ruta para obtener la cuenta de la mesa
 router.get("/bill/:table", (req, res) => {
-  console.log(req.params.table); //1
-  console.log(orders); //[ { table: '1', orders: [ '1', '5', '3' ] } ]
-  console.log(orders.map((tableObj) => tableObj.orders)); //[ [ '1', '5', '3' ] ]
-  console.log(orders.map((tableObj) => tableObj.orders).flat()); //[ '1', '5', '3' ]
+  //console.log(req.params.table); //1
+  //console.log(orders); //[ { table: '1', orders: [ '1', '5', '3' ] } ]
+  //console.log(orders.map((tableObj) => tableObj.orders)); //[ [ '1', '5', '3' ] ]
+  //console.log(orders.map((tableObj) => tableObj.orders).flat()); //[ '1', '5', '3' ]
   let testArray = orders.map((tableObj) => tableObj.orders).flat();
-  console.log(testArray); //[ '1', '5', '3' ]
   let totalArray = [];
+  let secondArray = [];
   testArray.forEach((orderItem) => {
     plates.forEach((foodItem) => {
       if (orderItem === foodItem.id) {
-        console.log(foodItem.name, foodItem.price);
         totalArray.push(foodItem.price);
+        secondArray.push(`${foodItem.name} ${foodItem.price}`);
       }
     });
   });
-  console.log(totalArray); //[ 10, 15.99, 15 ]
+  //console.log(totalArray); //[ 10, 15.99, 15 ]
+  //console.log(secondArray); //[ 'Pizza 10', 'Paella 15.99', 'Cake 15' ]
   let totalAmount = totalArray.reduce((acc, curr) => acc + curr, 0);
-  console.log("Total " + totalAmount); //Total 40.99
-  res.send("Testing");
+  //console.log("Total " + totalAmount); //Total 40.99
+  res.send(`${secondArray}\n------------\nTotal: ${totalAmount}`); //Pizza 10,Paella 15.99,Cake 15 Total: 40.99
+  //When a program or a system encounters \n in a string, it interprets it as a command to start a new line.
 });
 
 module.exports = router;
