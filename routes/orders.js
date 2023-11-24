@@ -4,9 +4,7 @@ const orders = require("../data/orders.json");
 const plates = require("../data/menu.json");
 const fs = require("fs");
 
-//Dentro de routes/orders.js necesitarás crear un CR para gestionar las órdenes.
 //La primera ruta debería ser un GET para recuperar todas las órdenes de ./data/orders.json
-
 router.get("/", (req, res) => {
   res.send(orders);
 });
@@ -24,14 +22,10 @@ router.post("/create", (req, res) => {
 
 //Bonus 🎁 Dentro de /routes/orders.js crea una ruta para obtener la cuenta de la mesa
 router.get("/bill/:table", (req, res) => {
-  //console.log(req.params.table); //1
-  //console.log(orders); //[ { table: '1', orders: [ '1', '5', '3' ] } ]
-  //console.log(orders.map((tableObj) => tableObj.orders)); //[ [ '1', '5', '3' ] ]
-  //console.log(orders.map((tableObj) => tableObj.orders).flat()); //[ '1', '5', '3' ]
-  let testArray = orders.map((tableObj) => tableObj.orders).flat();
+  let orderArray = orders.map((tableObj) => tableObj.orders).flat();
   let totalArray = [];
   let secondArray = [];
-  testArray.forEach((orderItem) => {
+  orderArray.forEach((orderItem) => {
     plates.forEach((foodItem) => {
       if (orderItem === foodItem.id) {
         totalArray.push(foodItem.price);
@@ -39,12 +33,8 @@ router.get("/bill/:table", (req, res) => {
       }
     });
   });
-  //console.log(totalArray); //[ 10, 15.99, 15 ]
-  //console.log(secondArray); //[ 'Pizza 10', 'Paella 15.99', 'Cake 15' ]
   let totalAmount = totalArray.reduce((acc, curr) => acc + curr, 0);
-  //console.log("Total " + totalAmount); //Total 40.99
-  res.send(`${secondArray}\n------------\nTotal: ${totalAmount}`); //Pizza 10,Paella 15.99,Cake 15 Total: 40.99
-  //When a program or a system encounters \n in a string, it interprets it as a command to start a new line.
+  res.send(`${secondArray}\n------------\nTotal: ${totalAmount}`);
 });
 
 module.exports = router;

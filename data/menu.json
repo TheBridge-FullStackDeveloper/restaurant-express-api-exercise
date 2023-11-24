@@ -29,9 +29,15 @@
   },
   {
     "id": "6",
-    "name": "Salad",
+    "name": "Cesar Salad",
     "price": 4.99,
     "description": "A salad is a dish of food typically consisting of a variety of nourishing and healthy ingredients, such as salad dressings, fruit, vegetables, and condiments. Salads are typically served as entrees or as a side dish, and may also be served as an appetizer, soup, or dessert. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Salad_with_tomatoes_and_mozzarella.jpg/220px-Salad_with_tomatoes_and_mozzarella.jpg"
+  },
+  {
+    "name": "Pasta al Pomodoro",
+    "description": "Tipical italian pasta",
+    "price": "10.99",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
   }
 ]
