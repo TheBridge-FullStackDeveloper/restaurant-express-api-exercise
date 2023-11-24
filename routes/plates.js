@@ -2,7 +2,6 @@
 const plates =  require("../data/menu.json")
 const express = require('express');
 const fs = require ("fs");
-const { stringify } = require("querystring");
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -19,7 +18,6 @@ router.get('/', (req, res) => {
   });
 
   router.put('/:id', (req, res) => {
-    // Lógica para actualizar un recurso
     const plateUpdate = plates.map((el) => {
       if (el.id === req.params.id){
         return {
@@ -36,7 +34,7 @@ router.get('/', (req, res) => {
     })
   });
 
-  router.delete('/api/borrar', (req, res) => {
+  router.delete('/:id', (req, res) => {
     // Lógica para eliminar un recurso
     const plateDelete = plates.filter((el) => {
       if (el.id === req.params.id){
