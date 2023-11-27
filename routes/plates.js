@@ -6,50 +6,51 @@ module.exports = router;
 
 const menu = require("../data/menu.json");
 
-router.get("", (req, res) => {
+router.get("/", (req, res) => {
   res.send(menu);
 });
 
-router.post("", (req, res) => {
-  const newPlate = {
-    name: "Pasta al Pomodoro",
-    description: "Tipical italian pasta",
-    price: "10.99",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG",
+router.post("/", (req, res) => {
+  const newPlate = [...menu, req.body];
+  const newData = {
+    message: "Plate Created",
+    data: req.body,
   };
 
-  const newMenu = [...menu, newPlate];
-  const plateData = JSON.stringify(newMenu);
-
-  fs.writeFile("./data/menu.json", plateData, (err) => {
+  fs.writeFile("./data/menu.json", JSON.stringify(newPlate), (err) => {
     if (err) throw err;
-  });
-  res.json({
-    message: "Plate Created",
-    data: newMenu,
+    res.send(newData);
   });
 });
 
-router.put("", (req, res) => {
+router.put("/:id", (req, res) => {
   const updatedMenu = menu.map((e) => {
-    if (e.name === "Salad") {
-      return { ...e, name: "Cesar Salad" };
+    if (e.id === req.params.id) {
+      return { ...e, name: req.body.name };
     }
     return e;
   });
 
-  const updatedMenuData = JSON.stringify(updatedMenu);
+  const newData = {
+    message: "Plate Created",
+    data: req.body.name,
+  };
 
-  fs.writeFile("./data/menu.json", updatedMenuData, (err) => {
+  fs.writeFile("./data/menu.json", JSON.stringify(updatedMenu), (err) => {
     if (err) throw err;
   });
-  res.json({
-    message: "Plate Updated",
-    data: updatedMenu,
-  });
+  res.json(newData);
 });
 
-router.delete("", (req, res) => {
-  res.send("Recurso eliminado exitosamente");
+router.delete("/:id", (req, res) => {
+  const deletePlate = menu.filter((e) => e.id !== req.params.id);
+  const newData = {
+    message: "Plate Removed",
+    data: menu[1],
+  };
+
+  fs.writeFile("./data/menu.json", JSON.stringify(deletePlate), (err) => {
+    if (err) throw err;
+  });
+  res.json(newData);
 });

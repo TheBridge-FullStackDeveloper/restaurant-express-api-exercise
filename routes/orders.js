@@ -2,20 +2,22 @@ const express = require("express");
 const router = express.Router();
 const fs = require("fs");
 
-router.get("", (req, res) => {
-    res.send("Recurso creado exitosamente");
+const orders = require("../data/orders.json");
+
+router.get("/", (req, res) => {
+  res.send(orders);
+});
+
+router.post("/", (req, res) => {
+  const newOrder = [...orders, req.body];
+  const newData = {
+    message: "Order Created",
+    data: req.body,
+  };
+  fs.writeFile("./data/orders.json", JSON.stringify(newOrder), (err) => {
+    if (err) throw err;
+    res.send(newData);
   });
-  
-  router.post("", (req, res) => {
-    res.send("Recurso creado exitosamente");
-  });
-  
-  router.put("", (req, res) => {
-    res.send("Recurso actualizado exitosamente");
-  });
-  
-  router.delete("", (req, res) => {
-    res.send("Recurso eliminado exitosamente");
-  });
+});
 
 module.exports = router;
