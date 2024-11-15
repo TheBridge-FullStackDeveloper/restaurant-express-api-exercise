@@ -43,7 +43,7 @@ POST http://localhost:3000/plates
 La tercera ruta debería ser un PUT para cambiar una propiedad de un plato y devolver un JSON como este { message: "Plate Updated", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
-PUT http://localhost:3000/plates/6 HTTP/1.1
+PUT http://localhost:3000/plates/6
 ```
 
 ```
