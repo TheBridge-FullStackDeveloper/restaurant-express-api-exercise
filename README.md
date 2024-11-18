@@ -65,7 +65,7 @@ La primera ruta debería ser un GET para recuperar todas las órdenes de `./data
 GET http://localhost:3000/orders
 ```
 
-La segunda ruta debería ser un POST para insertar una orden en ./data/menu.json y devolver un JSON como este { message: "Order Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
+La segunda ruta debería ser un POST para insertar una orden en `./data/orders.json` y devolver un JSON como este { message: "Order Created", data: AQUÍ DEBERÍAN IR LOS DATOS GUARDADOS }
 
 ```
 POST http://localhost:3000/orders/create
