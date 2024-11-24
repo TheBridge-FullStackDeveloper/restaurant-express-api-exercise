@@ -2,18 +2,17 @@
   "name": "restaurant-express-api",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.21.1",
     "nodemon": "^2.0.15"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Ejercicio de servidor express para restaurante\r El gerente de un restaurante os ha pedido crear un servidor para gestionar los platos y las órdenes de su restaurante."
 }
