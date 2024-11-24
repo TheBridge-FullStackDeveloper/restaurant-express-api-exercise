@@ -7,13 +7,6 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pizza_tradizionale.JPG/220px-Pizza_tradizionale.JPG"
   },
   {
-    "id": "2",
-    "name": "Burger",
-    "price": 5,
-    "description": "A burger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, or flame broiled. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often grilled on a bun or on a grill, and often contain other ingredients such as lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often grilled on a bun or on a grill, and often contain other ingredients such as lettuce, tomato, onion, pickles, bacon, or other ingredients.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg/220px-Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg"
-  },
-  {
     "id": "3",
     "name": "Cake",
     "price": 15,
@@ -36,7 +29,7 @@
   },
   {
     "id": "6",
-    "name": "Salad",
+    "name": "Cesar Salad",
     "price": 4.99,
     "description": "A salad is a dish of food typically consisting of a variety of nourishing and healthy ingredients, such as salad dressings, fruit, vegetables, and condiments. Salads are typically served as entrees or as a side dish, and may also be served as an appetizer, soup, or dessert. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Salad_with_tomatoes_and_mozzarella.jpg/220px-Salad_with_tomatoes_and_mozzarella.jpg"
