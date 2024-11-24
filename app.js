@@ -10,6 +10,13 @@ app.use(express.json());
 app.use("/orders", orders);
 app.use("/plates", plates);
 
+
+//for fun
+app.get("/", (req, res) => {
+  res.send("This confirms the server is working!  '../plates' will show me the menu and  '../orders' will hopefully show me orders");
+});
+//
+
 app.listen(PORT, () => {
   console.log(`Running on PORT ${PORT} 🚀`)
 });

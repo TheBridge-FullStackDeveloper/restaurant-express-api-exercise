@@ -7,3 +7,11 @@ router.get("/", (req, res) => {
 });
 
 module.exports = router; // Ensure this exports the router
+
+
+
+/*
+app.get("/all", (req, res) => {
+  res.send(books);
+});
+*/
