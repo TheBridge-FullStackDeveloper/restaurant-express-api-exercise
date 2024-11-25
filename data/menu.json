@@ -1,44 +1,44 @@
 [
-    {
-        "id": "1",
-        "name": "Pizza",
-        "price": 10,
-        "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature, traditionally in a wood-fired oven. It is commonly topped with a sauce, such as ketchup, mustard, onion sauce, or Alfredo, and sometimes with many other ingredients (anchovies, olives, meat, etc.) and is widely considered a traditional Italian dish. Pizza is often paired with antipasto, which is a dish of Italian origin that is usually made with vegetables, and sometimes meat, and is usually served warm.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pizza_tradizionale.JPG/220px-Pizza_tradizionale.JPG"
-    },
-    {
-        "id": "2",
-        "name": "Burger",
-        "price": 5,
-        "description": "A burger is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, or flame broiled. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often grilled on a bun or on a grill, and often contain other ingredients such as lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often served with cheese, lettuce, tomato, onion, pickles, bacon, or other ingredients. Hamburgers are often grilled on a bun or on a grill, and often contain other ingredients such as lettuce, tomato, onion, pickles, bacon, or other ingredients.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg/220px-Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg"
-    },
-    {
-        "id": "3",
-        "name": "Cake",
-        "price": 15,
-        "description": "A cake is a form of food, which is typically round and sweet, made from flour, sugar, and other ingredients, and is often served as a dessert. The recipe for a cake is typically symbolic of the food or mood of the chef who cooked it. Cake recipes vary widely in their composition, style, and presentation, but are usually based on sweet foods, such as flour, sugar, eggs, and butter. Cake recipes vary widely in their composition, style, and presentation, but are usually based on sweet foods, such as flour, sugar, eggs, and butter.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cake_with_chocolate_frosting.jpg/220px-Cake_with_chocolate_frosting.jpg"
-    },
-    {
-        "id": "4",
-        "name": "Coffee",
-        "price": 5,
-        "description": "Coffee is a brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant. The genus Coffea is native to tropical Africa (specifically having its origin in Ethiopia and Sudan) and Madagascar, the Comoros, Mauritius, and Réunion in Africa, and the Philippines, the Solomon Islands, and Vanuatu in Oceania. The plant is now cultivated in many areas of the world. The name coffee is also used to describe the leaves of the Coffea plant and the various species of the genus that are used as coffee beans.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Coffee_beans.jpg/220px-Coffee_beans.jpg"
-    },
-    {
-        "id": "5",
-        "name": "Paella",
-        "price": 15.99,
-        "description": "Paella is a dish of Spanish origin, consisting of a heaping of rice, meat, seafood, vegetables, and other ingredients, wrapped in a layer of rice paper or paella rice, and eaten either as a main dish or as a side dish. The dish originated in the Basque country of Spain, but has since become popular in other countries as well. The paella rice is a traditional Spanish rice dish, and is often eaten with seafood, seafood-based dishes, and seafood-based salads.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Paella_de_marisco.jpg/220px-Paella_de_marisco.jpg"
-    },
-    {
-        "id": "6",
-        "name": "Salad",
-        "price": 4.99,
-        "description": "A salad is a dish of food typically consisting of a variety of nourishing and healthy ingredients, such as salad dressings, fruit, vegetables, and condiments. Salads are typically served as entrees or as a side dish, and may also be served as an appetizer, soup, or dessert. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Salad_with_tomatoes_and_mozzarella.jpg/220px-Salad_with_tomatoes_and_mozzarella.jpg"
-    }
-  ]
+  {
+    "id": "1",
+    "name": "Pizza",
+    "price": 10,
+    "description": "Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (anchovies, olives, meat, etc.) baked at a high temperature, traditionally in a wood-fired oven. It is commonly topped with a sauce, such as ketchup, mustard, onion sauce, or Alfredo, and sometimes with many other ingredients (anchovies, olives, meat, etc.) and is widely considered a traditional Italian dish. Pizza is often paired with antipasto, which is a dish of Italian origin that is usually made with vegetables, and sometimes meat, and is usually served warm.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pizza_tradizionale.JPG/220px-Pizza_tradizionale.JPG"
+  },
+  {
+    "id": "3",
+    "name": "Cake",
+    "price": 15,
+    "description": "A cake is a form of food, which is typically round and sweet, made from flour, sugar, and other ingredients, and is often served as a dessert. The recipe for a cake is typically symbolic of the food or mood of the chef who cooked it. Cake recipes vary widely in their composition, style, and presentation, but are usually based on sweet foods, such as flour, sugar, eggs, and butter. Cake recipes vary widely in their composition, style, and presentation, but are usually based on sweet foods, such as flour, sugar, eggs, and butter.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cake_with_chocolate_frosting.jpg/220px-Cake_with_chocolate_frosting.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Coffee",
+    "price": 5,
+    "description": "Coffee is a brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant. The genus Coffea is native to tropical Africa (specifically having its origin in Ethiopia and Sudan) and Madagascar, the Comoros, Mauritius, and Réunion in Africa, and the Philippines, the Solomon Islands, and Vanuatu in Oceania. The plant is now cultivated in many areas of the world. The name coffee is also used to describe the leaves of the Coffea plant and the various species of the genus that are used as coffee beans.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Coffee_beans.jpg/220px-Coffee_beans.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Paella",
+    "price": 15.99,
+    "description": "Paella is a dish of Spanish origin, consisting of a heaping of rice, meat, seafood, vegetables, and other ingredients, wrapped in a layer of rice paper or paella rice, and eaten either as a main dish or as a side dish. The dish originated in the Basque country of Spain, but has since become popular in other countries as well. The paella rice is a traditional Spanish rice dish, and is often eaten with seafood, seafood-based dishes, and seafood-based salads.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Paella_de_marisco.jpg/220px-Paella_de_marisco.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Cesar Salad",
+    "price": 4.99,
+    "description": "A salad is a dish of food typically consisting of a variety of nourishing and healthy ingredients, such as salad dressings, fruit, vegetables, and condiments. Salads are typically served as entrees or as a side dish, and may also be served as an appetizer, soup, or dessert. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce. Salads are typically served with a variety of dressing options, such as vinaigrette, mayonnaise, mustard, or dressing, and may be accompanied by a dressing dressing, such as ranch dressing, or dressing sauce.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Salad_with_tomatoes_and_mozzarella.jpg/220px-Salad_with_tomatoes_and_mozzarella.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Pasta al Pomodoro",
+    "description": "Tipical italian pasta",
+    "price": "10.99",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pasta_al_pomodoro.JPG/220px-Pasta_al_pomodoro.JPG"
+  }
+]
