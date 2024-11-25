@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const platesRoutes = require('./plates'); 
-const ordersRoutes = require('./orders'); 
+const platesRouter = require('./plates'); 
+const ordersRouter = require('./orders'); 
 
-router.use('/plates', platesRoutes);
-router.use('/orders', ordersRoutes);
+router.use('/plates', platesRouter);
+router.use('/orders', ordersRouter);
 
 module.exports = router;

@@ -80,8 +80,7 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-    // Para borrar un plato del menú, primero tenemos que leer el menu, hacer un splice al array en función del id y volver a reescribirlo. Por tanto, usaremos fs.readFile, .splice y fs.writefile.
-
+    
     fs.readFile("./data/menu.json", "utf-8", (err, data) => {
         if (err) {
             console.error("Ocurrió un error al leer el archivo:", err);
